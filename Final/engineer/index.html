@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>الهيئه العامه للمرور</title>
-    <link rel="shortcut icon" type="image/x-icon" href="../fav.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>الهيئه العامه للمرور</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../fav.png" />
 
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
 
   <!-- jumbtron contain logo and introduction. -->
@@ -19,143 +21,142 @@
     <div class="container align-self-left ">
       <div class="row row-header">
         <div class="col-12 col-sm-3">
-            <img src="../logo.png" class="img-fluid">
+          <img src="../logo.png" class="img-fluid">
         </div>
         <div class="col-12 col-sm-6 align-slef-center">
           <h1>خدمات نيابه المرور</h1>
-          <p>مرحبا بك فى خدمه  نيابات المرور عبر بوابه الحكومه الالكترونيه</p>
-              </div>
+          <p>مرحبا بك فى خدمه نيابات المرور عبر بوابه الحكومه الالكترونيه</p>
         </div>
       </div>
+    </div>
   </header>
-      <!--adress-->
+  <!--adress-->
   <div class="row row-content ">
-        <div class="col-12 ml-auto adress">
-            <h3> ادخال بيانات مركبه</h3>
+    <div class="col-12 ml-auto adress">
+      <h3> ادخال بيانات مركبه</h3>
 
+    </div>
+  </div>
+  <!--Hints-->
+  <div class="row row-content ">
+    <div class="col-12 ml-auto Hints">
+      <h3>*يجب ادخال كل البيانات المطلوبه و عدم ترك شىء فارغ </h3>
+    </div>
+  </div>
+  <div class="col-12 col-md-9">
+    <form action="../server/engineerindex.php" method="get">
+
+      <!--name-->
+      <div class="form-group row">
+        <label for="vichaelname" class="col-md-2 col-12  col-form-label"> رقم الطلب<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="number" class="form-control" id="vichaelname" name="requestnumber" placeholder="">
         </div>
       </div>
-        <!--Hints-->
-  <div class="row row-content ">
-            <div class="col-12 ml-auto Hints">
-<h3>*يجب ادخال كل البيانات المطلوبه و عدم ترك شىء فارغ </h3>
-                <h6 class="warning"><span>*</span>كل المستندات المطلوبه رفعها يجب ان تكون صوره من ماسح ضوئى و واضحه حتى لا يتم رفض الطلب</h6>
-            </div>
-          </div>
-     <div class="col-12 col-md-9">
-                <form action="../server/engineerindex.php" method="get">
 
-                        <!--name-->
-                    <div class="form-group row">
-                        <label for="vichaelname" class="col-md-2 col-12  col-form-label"> رقم الطلب<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="vichaelname" name="requestnumber" placeholder="">
-                        </div>
-                    </div>
-
-                       <!--name-->
-                    <div class="form-group row">
-                        <label for="vichaelname" class="col-md-2 col-12  col-form-label"> اسم المركبه<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="vichaelname" name="vehiclename" placeholder="">
-                        </div>
-                    </div>
-
-                    <!--name-->
-                    <div class="form-group row">
-                        <label for="vichaeltype" class="col-md-2 col-12  col-form-label"> النوع<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="vichaeltype" name="vehicletype" placeholder="">
-                        </div>
-                    </div>
-                    <!--name-->
-                    <div class="form-group row">
-                        <label for="vichaelmodel" class="col-md-2 col-12  col-form-label"> موديل<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="vichaelmodel" name="vehiclemodel" placeholder="">
-                        </div>
-                    </div>
-                    <!--name-->
-                    <div class="form-group row">
-                        <label for="chaseenumber" class="col-md-2 col-12  col-form-label"> شاسيه<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="chaseenumber" name="chaseenumber" placeholder="">
-                        </div>
-                    </div>
-                    <!--name-->
-                    <div class="form-group row">
-                        <label for="motornumber" class="col-md-2 col-12  col-form-label"> رقم الموتور<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="motornumber" name="motornumber" placeholder="">
-                        </div>
-                    </div>
-                    <!--name-->
-                    <div class="form-group row">
-                        <label for="motorsize" class="col-md-2 col-12  col-form-label"> حجم الموتور<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="firstname" name="motorvol" placeholder="">
-                        </div>
-                    </div>
-                    <!--name-->
-                    <div class="form-group row">
-                        <label for="clindernumbers" class="col-md-2 col-12  col-form-label">  عدد السلندر<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="clindernumbers" name="cylindernumber" placeholder="">
-                        </div>
-                    </div>
-                           <!--fuel type-->
-                    <div class="form-group row">
-                        <label  class="col-12 col-md-2 col-form-label"> </label>
-                        <div class="btn-group ">
-                            <select name="fueltype">
-                  <button type="button" class="btn  dropdown-toggle dropdown-toggle-split " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     بنزين
-                     </button>
-                      <div class="dropdown-menu">
-
-                  <option value="ben" class="dropdown-item">بنزين</option>
-                  <option value="gas" class="dropdown-item" >غاز طبيعي</option>
-                  <option value="solar" class="dropdown-item" >سولار</option>
-                    </div>
-                            </select>
-                         </div>
-                    </div>
-                     <!--name-->
-                    <div class="form-group row">
-                        <label for="color" class="col-md-2 col-12  col-form-label">  اللون<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="color" name="color" placeholder="">
-                        </div>
-                    </div>
-                     
-                    
-                    <!--removed last 4 rows because not needed-->
-                    
-                    <!--send button-->
-                    <div class="form-group row">
-                        <div class="offset-md-2 col-md-10">
-                            <button type="submit" class="btn btn-primary">ارسال </button>
-                                  </div>
-                                          </div>
-      </form>
-            </div>
-
-
-<!-- Footer -->
-<footer class="page-footer font-small ">
-  <div class="footer-copyright text-center py-1">
-    © كل الحقوق محفوظه لعبد الله و بسمه و بولا
-  </div>
-    <div class="col-12 col-sm-2 mr-auto">
-        <a role="button" class="btn btn-secondary btn-block" id="logout">تسجيل خروج</a>
+      <!--name-->
+      <div class="form-group row">
+        <label for="vichaelname" class="col-md-2 col-12  col-form-label"> اسم المركبه<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="vichaelname" name="vehiclename" placeholder="">
+        </div>
       </div>
 
-</footer>
+      <!--name-->
+      <div class="form-group row">
+        <label for="vichaeltype" class="col-md-2 col-12  col-form-label"> النوع<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="vichaeltype" name="vehicletype" placeholder="">
+        </div>
+      </div>
+      <!--name-->
+      <div class="form-group row">
+        <label for="vichaelmodel" class="col-md-2 col-12  col-form-label"> موديل<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="vichaelmodel" name="vehiclemodel" placeholder="">
+        </div>
+      </div>
+      <!--name-->
+      <div class="form-group row">
+        <label for="chaseenumber" class="col-md-2 col-12  col-form-label"> شاسيه<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="chaseenumber" name="chaseenumber" placeholder="">
+        </div>
+      </div>
+      <!--name-->
+      <div class="form-group row">
+        <label for="motornumber" class="col-md-2 col-12  col-form-label"> رقم الموتور<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="motornumber" name="motornumber" placeholder="">
+        </div>
+      </div>
+      <!--name-->
+      <div class="form-group row">
+        <label for="motorsize" class="col-md-2 col-12  col-form-label"> حجم الموتور<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="firstname" name="motorvol" placeholder="">
+        </div>
+      </div>
+      <!--name-->
+      <div class="form-group row">
+        <label for="clindernumbers" class="col-md-2 col-12  col-form-label"> عدد السلندر<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="clindernumbers" name="cylindernumber" placeholder="">
+        </div>
+      </div>
+      <!--fuel type-->
+      <div class="form-group row">
+        <label class="col-12 col-md-2 col-form-label"> </label>
+        <div class="btn-group ">
+          <select name="fueltype">
+            <button type="button" class="btn  dropdown-toggle dropdown-toggle-split " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              بنزين
+            </button>
+            <div class="dropdown-menu">
+
+              <option value="ben" class="dropdown-item">بنزين</option>
+              <option value="gas" class="dropdown-item">غاز طبيعي</option>
+              <option value="solar" class="dropdown-item">سولار</option>
+            </div>
+          </select>
+        </div>
+      </div>
+      <!--name-->
+      <div class="form-group row">
+        <label for="color" class="col-md-2 col-12  col-form-label"> اللون<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="color" name="color" placeholder="">
+        </div>
+      </div>
 
 
-<script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
-<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+      <!--removed last 4 rows because not needed-->
 
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!--send button-->
+      <div class="form-group row">
+        <div class="offset-md-2 col-md-10">
+          <button type="submit" class="btn btn-primary">ارسال </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- Footer -->
+  <footer class="page-footer font-small ">
+
+    <br>
+    <div class="col-2 col-sm-1 mr-auto">
+      <a role="button" class="btn btn-secondary btn-block fa fa-user" id="employee"></a>
+    </div>
+    <div class="footer-copyright text-center py-3">
+      © كل الحقوق محفوظه لعبد الله و بسمه و بولا و احمد
+    </div>
+  </footer>
+
+
+  <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>

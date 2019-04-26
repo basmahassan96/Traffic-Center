@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="fav.png" />
-    <title>الهيئه العامه للمرور</title>
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-        <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/x-icon" href="fav.png" />
+  <title>الهيئه العامه للمرور</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <!-- The nav bar. -->
 
@@ -28,27 +30,25 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-خدمات الرخصه الشخصيه
+            خدمات الرخصه الشخصيه
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item active" href="./askforcarlic_id.html">استخراج رخصه</a>
             <a class="dropdown-item" href="./personalLicRenew.html">تجديد رخصه</a>
-              <a class="dropdown-item" href="./personalLicViolations.html">استعلام عن المخلفات</a>
+            <a class="dropdown-item" href="./personalLicViolations.html">استعلام عن المخلفات</a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-خدمات رخصه المركبات
-       </a>
+            خدمات رخصه المركبات
+          </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="./askforpersonallic_id.html">استخراج رخصه</a>
             <a class="dropdown-item" href="./carLicRenew.html">تجديد رخصه</a>
-              <a class="dropdown-item" href="./carViolations.html">استعلام عن المخلفات</a>
+            <a class="dropdown-item" href="./carViolations.html">استعلام عن المخلفات</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./requests.html">متابعه الطلبات</a>
-        </li>
+
 
       </ul>
     </div>
@@ -59,257 +59,214 @@
     <div class="container align-self-left ">
       <div class="row row-header">
         <div class="col-12 col-sm-3">
-            <img src="logo.png" class="img-fluid">
+          <img src="logo.png" class="img-fluid">
         </div>
         <div class="col-12 col-sm-6 align-slef-center">
           <h1>خدمات نيابه المرور</h1>
-          <p>مرحبا بك فى خدمه  نيابات المرور عبر بوابه الحكومه الالكترونيه</p>
-              </div>
-        </div>
-      </div>
-  </header>
-  <!-- The pop up of employee entry. -->
-  <div id="employeePanel" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-lg" role="content">
-      <div class="modal-content">
-        <div class="modal-header bg-primary">
-          <button type="button" class="close ml-auto" id="close">
-            &times;
-          </button>
-          <h4 class="modal-title ml-auto  ">برجاء ادخال رقمك القومى</h4>
-        </div>
-        <div class="modal-body">
-          <form>
-              <div class="form-group row">
-                    <label for="nationalid" class="col-md-2 col-form-label">الرقم القومى<span>:</span> </label>
-
-                    <div class="col-md-6">
-                        <input type="text" class="form-control"  name="nationalid" placeholder="الرقم القومى">
-                    </div>
-                </div>
-            <div class="col-12 col-sm-6 offset-2">
-              <button type="submit" class="btn btn-secondary">
-                دخول
-              </button>
-            </div>
-          </form>
+          <p>مرحبا بك فى خدمه نيابات المرور عبر بوابه الحكومه الالكترونيه</p>
         </div>
       </div>
     </div>
-  </div>
+  </header>
+
   <!--adress-->
   <div class="row row-content ">
-        <div class="col-12 ml-auto adress">
-            <h3>خدمه استخراج رخصه شخصيه</h3>
+    <div class="col-12 ml-auto adress">
+      <h3>خدمه استخراج رخصه شخصيه</h3>
 
+    </div>
+  </div>
+  <!--Hints-->
+  <div class="row row-content ">
+    <div class="col-12 ml-auto Hints">
+      <h3>*يجب ادخال كل البيانات المطلوبه و عدم ترك شىء فارغ </h3>
+
+    </div>
+  </div>
+  <!-- start of user input-->
+  <div class="col-12 col-md-9">
+    <form action="server/personalLic.php" method="get">
+      <!--name-->
+      <div class="form-group row">
+        <label for="firstname" class="col-md-2 col-12  col-form-label"> الاسم رباعى<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="firstname" name="firstname" placeholder="الاول" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="secondname" name="secondname" placeholder="الثانى" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="thirdname" name="thirdname" placeholder="الثالث" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="fourthname" name="fourthname" placeholder="الرابع" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
         </div>
       </div>
-        <!--Hints-->
-  <div class="row row-content ">
-            <div class="col-12 ml-auto Hints">
-              <h3>*يجب ادخال كل البيانات المطلوبه و عدم ترك شىء فارغ </h3>
-              <h6 class="warning"><span>*</span>كل المستندات المطلوب رفعها يجب ان تكون صوره من ماسح ضوئى و واضحه حتى لا يتم رفض الطلب</h6>
+      <!--birthday-->
+      <div class="form-group row">
+        <label for="firstname" class="col-md-2 col-form-label">تاريخ الميلاد<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" name="day" placeholder="اليوم" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="month" name="month" placeholder="الشهر" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="year" name="year" placeholder="السنه" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+      </div>
+      <!--birthlocation-->
+      <div class="form-group row">
+        <label for="firstname" class="col-md-2 col-form-label">محل الميلاد<span>:</span> </label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="birthlocation" name="birthlocation" placeholder="محل الميلاد" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+      </div>
+      <!--Gender-->
+
+      <div class="form-group row">
+        <label for="telnum" class="col-12 col-md-2 col-form-label">النوع:</label>
+
+        <div class="col-2 col-md-2">
+          <input type="radio" name="radio" value="radio1" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+          <label for="male" class="col-12 col-md-2 col-form-label">ذكر</label>
+        </div>
+
+        <div class="col-2 col-md-2">
+          <input type="radio" name="radio" value="radio2" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+          <label for="female" class="col-12 col-md-2 col-form-label">انثى</label>
+        </div>
+
+
+      </div>
+      <!--Nationalid-->
+      <div class="form-group row">
+        <label for="email" class="col-md-2 col-form-label">الرقم القومى</label>
+        <div class="col-md-5">
+          <input type="text" class="form-control" id="nationalid" name="nationalid" placeholder="الرقم القومى" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+      </div>
+      <!--Mobile-->
+      <div class="form-group row">
+        <label for="telnum" class="col-12 col-md-2 col-form-label">رقم المحمول</label>
+        <div class="col-5 col-md-5">
+          <input type="te" class="form-control" id="telnum" name="telnum" placeholder="رقم المحمول" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+      </div>
+      <!--address-->
+      <div class="form-group row">
+        <label for="telnum" class="col-12 col-md-2 col-form-label">العنوان :</label>
+
+        <div class="col-9 col-md-9">
+          <input type="text" class="form-control" id="address2" name="address" placeholder="عنوان 2" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+      </div>
+      <!--relegion-->
+      <div class="form-group row">
+        <label class="col-12 col-md-2 col-form-label">الديانه</label>
+        <div class="btn-group ">
+          <select name="relegion">
+            <button type="button" class="btn  dropdown-toggle dropdown-toggle-split " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              مسلم
+            </button>
+            <div class="dropdown-menu">
+
+              <option value="1" class="dropdown-item">مسلم</option>
+              <option value="2" class="dropdown-item">مسيحى</option>
             </div>
-          </div>
-<!-- start of user input-->
-            <div class="col-12 col-md-9">
-                <form action="server/personalLic.php" method="get">
-                  <!--name-->
-                    <div class="form-group row">
-                        <label for="firstname" class="col-md-2 col-12  col-form-label"> الاسم رباعى<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="الاول" required  oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="secondname" name="secondname" placeholder="الثانى" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="thirdname" name="thirdname" placeholder="الثالث"  required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="fourthname" name="fourthname" placeholder="الرابع" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                    </div>
-                    <!--birthday-->
-                    <div class="form-group row">
-                        <label for="firstname" class="col-md-2 col-form-label">تاريخ الميلاد<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control"  name="day" placeholder="اليوم" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="month" name="month" placeholder="الشهر" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="year" name="year" placeholder="السنه" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        </div>
-                        <!--birthlocation-->
-                        <div class="form-group row">
-                            <label for="firstname" class="col-md-2 col-form-label">محل الميلاد<span>:</span> </label>
-                            <div class="col-md-4">
-                                <input type="text" class="form-control" id="birthlocation" name="birthlocation" placeholder="محل الميلاد" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                            </div>
-                            </div>
-              <!--Gender-->
+          </select>
+        </div>
+      </div>
+      <!--Traffic location-->
 
-                    <div class="form-group row">
-                        <label for="telnum" class="col-12 col-md-2 col-form-label">النوع:</label>
+      <div class="form-group row">
+        <label class="col-12 col-md-2 col-form-label">وحده الترخيص </label>
+        <div class="btn-group ">
+          <select name="trafficlocation">
+            <button type="button" class="btn  dropdown-toggle dropdown-toggle-split " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-                        <div  class="col-2 col-md-2">
-                            <input type="radio" name="radio"  value="radio1" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                            <label for="male" class="col-12 col-md-2 col-form-label">ذكر</label>
-                               </div>
+            </button>
+            <div class="dropdown-menu">
 
-                      <div  class="col-2 col-md-2">
-                        <input type="radio" name="radio" value="radio2" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')" >
-                           <label for="female" class="col-12 col-md-2 col-form-label">انثى</label>
-                             </div>
-
-
-                    </div>
-                     <!--Nationalid-->
-                    <div class="form-group row">
-                        <label for="email" class="col-md-2 col-form-label">الرقم القومى</label>
-                        <div class="col-md-5">
-                            <input type="text" class="form-control" id="nationalid" name="nationalid" placeholder="الرقم القومى" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                    </div>
-                    <!--Mobile-->
-                    <div class="form-group row">
-                        <label for="telnum" class="col-12 col-md-2 col-form-label">رقم المحمول</label>
-                        <div class="col-5 col-md-5">
-                            <input type="te" class="form-control" id="telnum" name="telnum" placeholder="رقم المحمول" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                    </div>
-                    <!--address-->
-                    <div class="form-group row">
-                        <label for="telnum" class="col-12 col-md-2 col-form-label">العنوان :</label>
-
-                        <div class="col-9 col-md-9">
-                            <input type="text" class="form-control" id="address2" name="address" placeholder="عنوان 2"required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')" >
-                        </div>
-                    </div>
-                    <!--relegion-->
-                    <div class="form-group row">
-                        <label  class="col-12 col-md-2 col-form-label">الديانه</label>
-                        <div class="btn-group ">
-                          <select name="relegion">
-                  <button type="button" class="btn  dropdown-toggle dropdown-toggle-split " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     مسلم
-                     </button>
-                      <div class="dropdown-menu">
-
-                  <option value="1" class="dropdown-item">مسلم</option>
-                  <option value="2" class="dropdown-item" >مسيحى</option>
-                 </div>
-               </select>
-                         </div>
-                    </div>
-                    <!--identification types-->
-
-                    <div class="form-group row">
-                        <label  class="col-12 col-md-2 col-form-label">نوع بطاقه التعريف</label>
-                        <div class="btn-group ">
-                            <select name="idcard">
-                  <button type="button" class="btn  dropdown-toggle dropdown-toggle-split " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">بطاقه                     </button>
-                      <div class="dropdown-menu">
-
-                  <option value="1" class="dropdown-item">بطاقه</option>
-                  <option  value="2" class="dropdown-item" >جواز سفر</option>
-                 </div>
-               </select>
-                         </div>
-                    </div>
-                    <!--personal picture-->
-                    <div class="form-group row">
-                  <label for="personalpicture"  class="col-md-3 col-form-label">برجاءرفع صوره شخصيه 4*6</label>
-                 <div class="col-5 col-md-5">
-                  <input type="file" class="form-control-file" name="personalpicture"id="personalpicture">
-                   </div>
-                     </div>
-                     <!--birthCertficate-->
-                 <div class="form-group row">
-                      <label for="birthCertficate"  class="col-md-3 col-form-label">برجاء رفع صوره شهاده الميلاد</label>
-                           <div class="col-5 col-md-5">
-                                <input type="file" class="form-control-file" id="birthCertficate" name="birthCertficate">
-                                   </div>
-                               </div>
-                       <!--IDpicture-->
-                           <div class="form-group row">
-                          <label for="IDpicture"  class="col-md-3 col-form-label">برجاء رفع صوره البطاقه</label>
-                           <div class="col-5 col-md-5">
-                    <input type="file" class="form-control-file" name="IDpicture" id="IDpicture">
-                                         </div>
-                                       </div>
-                         <!--eductionCertifcate-->
-                                     <div class="form-group row">
-                                  <label for="eductionCertifcate"  class="col-md-3 col-form-label">برجاء رفع صوره من المؤهل الدراسى</label>
-                                               <div class="col-5 col-md-5">
-                                                <input type="file" class="form-control-file" name="eductionCertifcate" id="eductionCertifcate">
-
-                                               </div>
-                                               </div>
-                         <!--medicalReport-->
-                           <div class="form-group row">
-               <label for="picrure"  class="col-md-3 col-form-label">برجاء رفع صوره من التقرير الطبى </label>
-                                     <div class="col-5 col-md-5">
-                              <input type="file" class="form-control-file" id="medicalReport">
-                                   </div>
-                                     </div>
-                             <!--send button-->
-
-                            <input type="submit" name="insert" class="btn btn-primary">ارسال </input>
-
-      </form>
+              <option value="1" class="dropdown-item">البساتين </option>
+              <option value="2" class="dropdown-item">المعادى </option>
+              <option value="2" class="dropdown-item">حلوان </option>
             </div>
-            <!--Footer-->
-            <footer class="page-footer font-small ">
-              <div class="footer-copyright text-center py-3">
-                © كل الحقوق محفوظه لعبد الله و بسمه و بولا
-              </div>
+          </select>
+        </div>
+      </div>
+      <!--identification types-->
 
-            </footer>
+      <div class="form-group row">
+        <label class="col-12 col-md-2 col-form-label">نوع بطاقه التعريف</label>
+        <div class="btn-group ">
+          <select name="idcard">
+            <button type="button" class="btn  dropdown-toggle dropdown-toggle-split " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">بطاقه </button>
+            <div class="dropdown-menu">
+
+              <option value="1" class="dropdown-item">بطاقه</option>
+              <option value="2" class="dropdown-item">جواز سفر</option>
+            </div>
+          </select>
+        </div>
+      </div>
+
+
+      <!--send button-->
+
+      <div class="offset-md-2 col-md-10">
+        <button type="submit" class="btn btn-primary">ارسال </button>
+      </div>
+
+    </form>
+  </div>
+  <!-- Footer -->
+  <footer class="page-footer font-small ">
+
+    <br>
+    <div class="col-2 col-sm-1 mr-auto">
+      <a role="button" class="btn btn-secondary btn-block fa fa-user" id="employee"></a>
+    </div>
+    <div class="footer-copyright text-center py-3">
+      © كل الحقوق محفوظه لعبد الله و بسمه و بولا و احمد
+    </div>
+  </footer>
 
 
 
 
-            <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-            <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-            <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
-<!-- jquery for the pop up for the ntey of employee-->
-            <script>
-            $(document).ready(function(){
+  <!-- jquery for the pop up for the ntey of employee-->
+  <script>
+    $(document).ready(function() {
 
-            				 $("#employee").click(function(){
-            					 $('#employeePanel').modal('show');
-            });
-            $("#close").click(function(){
-            	$('#employeePanel').modal('hide');
-
-            });
-            $('#insert').click(function(){
-           var image_name = $('#personalpicture').val();
-           if(image_name == '')
-           {
-                alert("Please Select Image");
-                return false;
-           }
-           else
-           {
-                var extension = $('#personalpicture').val().split('.').pop().toLowerCase();
-                if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)
-                {
-                     alert('Invalid Image File');
-                     $('#personalpicture').val('');
-                     return false;
-                }
-           }
+      $("#employee").click(function() {
+        $('#employeePanel').modal('show');
       });
-                     });
+      $("#close").click(function() {
+        $('#employeePanel').modal('hide');
 
-            </script>
+      });
+      $('#insert').click(function() {
+        var image_name = $('#personalpicture').val();
+        if (image_name == '') {
+          alert("Please Select Image");
+          return false;
+        } else {
+          var extension = $('#personalpicture').val().split('.').pop().toLowerCase();
+          if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+            alert('Invalid Image File');
+            $('#personalpicture').val('');
+            return false;
+          }
+        }
+      });
+    });
+  </script>
 
 </body>
 

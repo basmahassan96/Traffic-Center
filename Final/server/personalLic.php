@@ -54,9 +54,18 @@ if($_GET['relegion']=="1"){
 //9- get thd citzien idcard
 $identfication;
 if($_GET['idcard']=="1"){
-  $identfication="بطاقه";
+  $identfication="مصرى";
 }else if($_GET['idcard']=="2"){
-  $identfication="باسبور";
+  $identfication="اجنبى";
+}
+///10-get the trafiic location
+$trafficlocation;
+if($_GET['trafficlocation']=="1"){
+  $trafficlocation="مرور البساتين";
+}else if($_GET['trafficlocation']=="2"){
+  $trafficlocation="مرور المعادى";
+} else if($_GET['trafficlocation']=="3"){
+  $trafficlocation="مرور المعادى";
 }
 
 ///////////<----- make ready of personal licesne data----->////////////////////
@@ -66,7 +75,7 @@ $startdate= date("Y-m-d");
 //2-add 3 years to the current year to make it as endyear
 $num = intval(strtok($startdate, '-')) ;
  $enddate=$num+3;
- $enddate=$enddate.'-'.date("m").date("d");
+ $enddate=$enddate.'-'.date("m").('-').date("d");
 
 
 
@@ -77,17 +86,15 @@ $num = intval(strtok($startdate, '-')) ;
 //$file = addslashes(file_get_contents($_FILES["personalpicture"]));
 
 
-$sql = "INSERT INTO person (national_id, firstname, secondname,thirdname,fourthname,address,birthdate,religion,gender,nationality,birth_place)
-VALUES ('$nationalid', '$firstname', '$secondname','$thirdname','$fourthname','$address','$birthdate','$relegion','$gender','$identfication','$birthlocation')";
+$sql = "INSERT INTO person (national_id, firstname, secondname,thirdname,fourthname,address,birthdate,religion,gender,nationality,birth_place,traffic_location,phone_number)
+VALUES ('$nationalid', '$firstname', '$secondname','$thirdname','$fourthname','$address','$birthdate','$relegion','$gender','$identfication','$birthlocation','$trafficlocation',$mobile)";
 
 
-$sql2="INSERT INTO phone (phone_number,national_id)
-VALUES('$mobile','$nationalid')";
 $sql3="INSERT INTO personal_license(release_date,end_date,national_id)
 VALUES('$startdate','$enddate','$nationalid')";
 
 
-if ($conn->query($sql) === TRUE && $conn->query($sql2) === TRUE &&$conn->query($sql3) === TRUE) {
+if ($conn->query($sql) === TRUE  &&$conn->query($sql3) === TRUE) {
  header("Location: ../index.html");
  echo"succed";
 } else{

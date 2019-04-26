@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="fav.png" />
-    <title>الهيئه العامه للمرور</title>
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-        <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/x-icon" href="fav.png" />
+  <title>الهيئه العامه للمرور</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <!-- The nav bar. -->
 
@@ -29,252 +31,211 @@
     <div class="container align-self-left ">
       <div class="row row-header">
         <div class="col-12 col-sm-3">
-            <img src="logo.png" class="img-fluid">
+          <img src="logo.png" class="img-fluid">
         </div>
         <div class="col-12 col-sm-6 align-slef-center">
           <h1>خدمات نيابه المرور</h1>
-          <p>مرحبا بك فى خدمه  نيابات المرور عبر بوابه الحكومه الالكترونيه</p>
-              </div>
-        </div>
-      </div>
-  </header>
-  <!-- The pop up of employee entry. -->
-  <div id="employeePanel" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-lg" role="content">
-      <div class="modal-content">
-        <div class="modal-header bg-primary">
-          <button type="button" class="close ml-auto" id="close">
-            &times;
-          </button>
-          <h4 class="modal-title ml-auto  ">برجاء ادخال رقمك القومى</h4>
-        </div>
-        <div class="modal-body">
-          <form>
-              <div class="form-group row">
-                    <label for="nationalid" class="col-md-2 col-form-label">الرقم القومى<span>:</span> </label>
-
-                    <div class="col-md-6">
-                        <input type="text" class="form-control"  name="nationalid" placeholder="الرقم القومى">
-                    </div>
-                </div>
-            <div class="col-12 col-sm-6 offset-2">
-              <button type="submit" class="btn btn-secondary">
-                دخول
-              </button>
-            </div>
-          </form>
+          <p>مرحبا بك فى خدمه نيابات المرور عبر بوابه الحكومه الالكترونيه</p>
         </div>
       </div>
     </div>
-  </div>
+  </header>
+
   <!--adress-->
   <div class="row row-content ">
-        <div class="col-12 ml-auto adress">
-            <h3>اضافه موظف جديد بالهيئه العامه للمرور</h3>
+    <div class="col-12 ml-auto adress">
+      <h3>اضافه موظف جديد بالهيئه العامه للمرور</h3>
 
+    </div>
+  </div>
+  <!--Hints-->
+  <div class="row row-content ">
+    <div class="col-12 ml-auto Hints">
+      <h3>*يجب ادخال كل البيانات المطلوبه و عدم ترك شىء فارغ </h3>
+
+    </div>
+  </div>
+  <!-- start of user input-->
+  <div class="col-12 col-md-9">
+    <form action="server/manager.php" method="get">
+      <!--name-->
+      <div class="form-group row">
+        <label for="firstname" class="col-md-2 col-12  col-form-label"> الاسم رباعى<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="firstname" name="firstname" placeholder="الاول" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="secondname" name="secondname" placeholder="الثانى" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="thirdname" name="thirdname" placeholder="الثالث" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="fourthname" name="fourthname" placeholder="الرابع" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
         </div>
       </div>
-        <!--Hints-->
-  <div class="row row-content ">
-            <div class="col-12 ml-auto Hints">
-              <h3>*يجب ادخال كل البيانات المطلوبه و عدم ترك شىء فارغ </h3>
-              <h6 class="warning"><span>*</span>كل المستندات المطلوب رفعها يجب ان تكون صوره من ماسح ضوئى و واضحه حتى لا يتم رفض الطلب</h6>
+      <!--birthday-->
+      <div class="form-group row">
+        <label for="firstname" class="col-md-2 col-form-label">تاريخ الميلاد<span>:</span> </label>
+        <div class="col-md-2">
+          <input type="text" class="form-control" name="day" placeholder="اليوم" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="month" name="month" placeholder="الشهر" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+        <div class="col-md-2">
+          <input type="text" class="form-control" id="year" name="year" placeholder="السنه" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+      </div>
+      <!--birthlocation-->
+      <div class="form-group row">
+        <label for="firstname" class="col-md-2 col-form-label">محل الميلاد<span>:</span> </label>
+        <div class="col-md-4">
+          <input type="text" class="form-control" id="birthlocation" name="birthlocation" placeholder="محل الميلاد" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+      </div>
+      <!--Gender-->
+
+      <div class="form-group row">
+        <label for="telnum" class="col-12 col-md-2 col-form-label">النوع:</label>
+
+        <div class="col-2 col-md-2">
+          <input type="radio" name="radio" value="radio1" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+          <label for="male" class="col-12 col-md-2 col-form-label">ذكر</label>
+        </div>
+
+        <div class="col-2 col-md-2">
+          <input type="radio" name="radio" value="radio2" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+          <label for="female" class="col-12 col-md-2 col-form-label">انثى</label>
+        </div>
+
+
+      </div>
+      <!--Nationalid-->
+      <div class="form-group row">
+        <label for="email" class="col-md-2 col-form-label">الرقم القومى</label>
+        <div class="col-md-5">
+          <input type="text" class="form-control" id="nationalid" name="nationalid" placeholder="الرقم القومى" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+      </div>
+      <!--Mobile-->
+      <div class="form-group row">
+        <label for="telnum" class="col-12 col-md-2 col-form-label">رقم المحمول</label>
+        <div class="col-5 col-md-5">
+          <input type="te" class="form-control" id="telnum" name="telnum" placeholder="رقم المحمول" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+      </div>
+
+      <!--address-->
+      <div class="form-group row">
+        <label for="telnum" class="col-12 col-md-2 col-form-label">العنوان :</label>
+
+        <div class="col-5 col-md-5">
+          <input type="text" class="form-control" id="address1" name="address" placeholder=" العنوان" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+
+      </div>
+      <!--Salary-->
+      <div class="form-group row">
+        <label for="number" class="col-12 col-md-2 col-form-label">المرتب :</label>
+
+        <div class="col-5 col-md-5">
+          <input type="text" class="form-control" id="salary" name="salary" placeholder=" المرتب" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
+        </div>
+
+      </div>
+      <!--job title-->
+      <div class="form-group row">
+        <label class="col-12 col-md-2 col-form-label">الوظيفه </label>
+        <div class="btn-group ">
+          <select name="jobtitle">
+            <button type="button" class="btn  dropdown-toggle dropdown-toggle-split " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              مسلم
+            </button>
+            <div class="dropdown-menu">
+
+              <option value="1" class="dropdown-item">ظابط مرور </option>
+              <option value="2" class="dropdown-item">مهندس الفحص</option>
+              <option value="3" class="dropdown-item">موظف فى هيئه المرور </option>
+
             </div>
-          </div>
-<!-- start of user input-->
-            <div class="col-12 col-md-9">
-                <form action="" method="get">
-                  <!--name-->
-                    <div class="form-group row">
-                        <label for="firstname" class="col-md-2 col-12  col-form-label"> الاسم رباعى<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="firstname" name="firstname" placeholder="الاول" required  oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="secondname" name="secondname" placeholder="الثانى" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="thirdname" name="thirdname" placeholder="الثالث"  required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="fourthname" name="fourthname" placeholder="الرابع" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                    </div>
-                    <!--birthday-->
-                    <div class="form-group row">
-                        <label for="firstname" class="col-md-2 col-form-label">تاريخ الميلاد<span>:</span> </label>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control"  name="day" placeholder="اليوم" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="month" name="month" placeholder="الشهر" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="text" class="form-control" id="year" name="year" placeholder="السنه" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                        </div>
-                        <!--birthlocation-->
-                        <div class="form-group row">
-                            <label for="firstname" class="col-md-2 col-form-label">محل الميلاد<span>:</span> </label>
-                            <div class="col-md-4">
-                                <input type="text" class="form-control" id="birthlocation" name="birthlocation" placeholder="محل الميلاد" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                            </div>
-                            </div>
-              <!--Gender-->
+          </select>
+        </div>
+      </div>
 
-                    <div class="form-group row">
-                        <label for="telnum" class="col-12 col-md-2 col-form-label">النوع:</label>
+      <!--relegion-->
+      <div class="form-group row">
+        <label class="col-12 col-md-2 col-form-label">الديانه</label>
+        <div class="btn-group ">
+          <select name="relegion">
+            <button type="button" class="btn  dropdown-toggle dropdown-toggle-split " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              مسلم
+            </button>
+            <div class="dropdown-menu">
 
-                        <div  class="col-2 col-md-2">
-                            <input type="radio" name="radio"  value="radio1" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                            <label for="male" class="col-12 col-md-2 col-form-label">ذكر</label>
-                               </div>
-
-                      <div  class="col-2 col-md-2">
-                        <input type="radio" name="radio" value="radio2" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')" >
-                           <label for="female" class="col-12 col-md-2 col-form-label">انثى</label>
-                             </div>
-
-
-                    </div>
-                     <!--Nationalid-->
-                    <div class="form-group row">
-                        <label for="email" class="col-md-2 col-form-label">الرقم القومى</label>
-                        <div class="col-md-5">
-                            <input type="text" class="form-control" id="nationalid" name="nationalid" placeholder="الرقم القومى" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                    </div>
-                    <!--Mobile-->
-                    <div class="form-group row">
-                        <label for="telnum" class="col-12 col-md-2 col-form-label">رقم المحمول</label>
-                        <div class="col-5 col-md-5">
-                            <input type="te" class="form-control" id="telnum" name="telnum" placeholder="رقم المحمول" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-                    </div>
-
-                    <!--address-->
-                    <div class="form-group row">
-                        <label for="telnum" class="col-12 col-md-2 col-form-label">العنوان :</label>
-
-                        <div class="col-5 col-md-5">
-                            <input type="text" class="form-control" id="address1" name="address1" placeholder=" عنوان 1" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-
-                    </div>
-                    <!--Salary-->
-                    <div class="form-group row">
-                        <label for="number" class="col-12 col-md-2 col-form-label">المرتب :</label>
-
-                        <div class="col-5 col-md-5">
-                            <input type="text" class="form-control" id="salary" name="salary" placeholder=" المرتب" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-
-                    </div>
-                    <!--job title-->
-                    <div class="form-group row">
-                        <label for="number" class="col-12 col-md-2 col-form-label">الوظيفه :</label>
-
-                        <div class="col-5 col-md-5">
-                            <input type="text" class="form-control" id="salary" name="job title" placeholder=" الوظيفه" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-
-                    </div>
-                    <!--username-->
-                    <div class="form-group row">
-                        <label for="number" class="col-12 col-md-2 col-form-label">اسم المستخدم الخاص بيه :</label>
-
-                        <div class="col-5 col-md-5">
-                            <input type="text" class="form-control" id="salary" name="job title" placeholder=" اسم المستخدم" required oninvalid="this.setCustomValidity('يرجاء ملىء البينات المطلوبه')">
-                        </div>
-
-                    </div>
-                    <!--relegion-->
-                    <div class="form-group row">
-                        <label  class="col-12 col-md-2 col-form-label">الديانه</label>
-                        <div class="btn-group ">
-                          <select name="relegion">
-                  <button type="button" class="btn  dropdown-toggle dropdown-toggle-split " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     مسلم
-                     </button>
-                      <div class="dropdown-menu">
-
-                  <option value="1" class="dropdown-item">مسلم</option>
-                  <option value="2" class="dropdown-item" >مسيحى</option>
-                 </div>
-               </select>
-                         </div>
-                    </div>
-
-                    <!--personal picture-->
-                    <div class="form-group row">
-                  <label for="personalpicture"  class="col-md-3 col-form-label">برجاءرفع صوره شخصيه 4*6</label>
-                 <div class="col-5 col-md-5">
-                  <input type="file" class="form-control-file" name="personalpicture"id="personalpicture">
-                   </div>
-                     </div>
-
-                           <div class="form-group row">
-                          <label for="IDpicture"  class="col-md-3 col-form-label">برجاء رفع صوره البطاقه</label>
-                           <div class="col-5 col-md-5">
-                    <input type="file" class="form-control-file" name="IDpicture" id="IDpicture">
-                                         </div>
-                                       </div>
-                                       <!--send button-->
-
-                                      <input type="submit" name="insert" class="btn btn-primary">ارسال </input>
-
-                                         </div>
-
-      </form>
+              <option value="1" class="dropdown-item">مسلم</option>
+              <option value="2" class="dropdown-item">مسيحى</option>
             </div>
-            <!--Footer-->
-            <footer class="page-footer font-small ">
-              <div class="footer-copyright text-center py-3">
-                © كل الحقوق محفوظه لعبد الله و بسمه و بولا
-              </div>
-
-            </footer>
+          </select>
+        </div>
+      </div>
 
 
+      <!--send button-->
+
+      <input type="submit" name="insert" class="btn btn-primary">ارسال </input>
+
+  </div>
+
+  </form>
+  </div>
+  <!-- Footer -->
+  <footer class="page-footer font-small ">
+
+    <br>
+    <div class="col-2 col-sm-1 mr-auto">
+      <a role="button" class="btn btn-secondary btn-block fa fa-user" id="employee"></a>
+    </div>
+    <div class="footer-copyright text-center py-3">
+      © كل الحقوق محفوظه لعبد الله و بسمه و بولا و احمد
+    </div>
+  </footer>
 
 
-            <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-            <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-            <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
-<!-- jquery for the pop up for the ntey of employee-->
-            <script>
-            $(document).ready(function(){
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-            				 $("#employee").click(function(){
-            					 $('#employeePanel').modal('show');
-            });
-            $("#close").click(function(){
-            	$('#employeePanel').modal('hide');
 
-            });
-            $('#insert').click(function(){
-           var image_name = $('#personalpicture').val();
-           if(image_name == '')
-           {
-                alert("Please Select Image");
-                return false;
-           }
-           else
-           {
-                var extension = $('#personalpicture').val().split('.').pop().toLowerCase();
-                if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)
-                {
-                     alert('Invalid Image File');
-                     $('#personalpicture').val('');
-                     return false;
-                }
-           }
+  <!-- jquery for the pop up for the ntey of employee-->
+  <script>
+    $(document).ready(function() {
+
+      $("#employee").click(function() {
+        $('#employeePanel').modal('show');
       });
-                     });
+      $("#close").click(function() {
+        $('#employeePanel').modal('hide');
 
-            </script>
+      });
+      $('#insert').click(function() {
+        var image_name = $('#personalpicture').val();
+        if (image_name == '') {
+          alert("Please Select Image");
+          return false;
+        } else {
+          var extension = $('#personalpicture').val().split('.').pop().toLowerCase();
+          if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+            alert('Invalid Image File');
+            $('#personalpicture').val('');
+            return false;
+          }
+        }
+      });
+    });
+  </script>
 
 </body>
 

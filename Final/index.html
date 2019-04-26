@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/x-icon" href="fav.png" />
-    <title>الهيئه العامه للمرور</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/x-icon" href="fav.png" />
+  <title>الهيئه العامه للمرور</title>
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <!-- The nav bar. -->
 
@@ -27,27 +29,25 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-خدمات الرخصه الشخصيه
+            خدمات الرخصه الشخصيه
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href=" ./askforcarlic_id.html">استخراج رخصه</a>
             <a class="dropdown-item" href="./personalLicRenew.html">تجديد رخصه</a>
-              <a class="dropdown-item" href="./personalLicViolation.html">استعلام عن المخلفات</a>
+            <a class="dropdown-item" href="./personalLicViolation.html">استعلام عن المخلفات</a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-خدمات رخصه المركبات
-       </a>
+            خدمات رخصه المركبات
+          </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="./askforpersonallic_id.html">استخراج رخصه</a>
             <a class="dropdown-item" href="./carLicRenew.html">تجديد رخصه</a>
-              <a class="dropdown-item" href="./carViolations.html">استعلام عن المخلفات</a>
+            <a class="dropdown-item" href="./carViolations.html">استعلام عن المخلفات</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./requests.html">متابعه الطلبات</a>
-        </li>
+
 
       </ul>
     </div>
@@ -58,18 +58,19 @@
     <div class="container align-self-left ">
       <div class="row row-header">
         <div class="col-12 col-sm-3">
-            <img src="logo.png" class="img-fluid">
+          <img src="logo.png" class="img-fluid">
         </div>
         <div class="col-12 col-sm-6 align-slef-center">
           <h1>خدمات نيابه المرور</h1>
-          <p>مرحبا بك فى خدمه  نيابات المرور عبر بوابه الحكومه الالكترونيه</p>
-              </div>
+          <p>مرحبا بك فى خدمه نيابات المرور عبر بوابه الحكومه الالكترونيه</p>
         </div>
       </div>
+    </div>
   </header>
 
   <!-- The pop up of employee entry. -->
   <div id="employeePanel" class="modal fade" role="dialog">
+
     <div class="modal-dialog modal-lg" role="content">
       <div class="modal-content">
         <div class="modal-header bg-primary">
@@ -79,16 +80,16 @@
           <h4 class="modal-title ml-auto  ">برجاء ادخال رقمك القومى</h4>
         </div>
         <div class="modal-body">
-          <form>
-              <div class="form-group row">
-                    <label for="firstname" class="col-md-2 col-form-label">الرقم القومى<span>:</span> </label>
+          <form action="server/login.php" method="get">
+            <div class="form-group row">
+              <label for="firstname" class="col-md-2 col-form-label">الرقم القومى<span>:</span> </label>
 
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" id="empid" name="fourthname" placeholder="الرقم القومى">
-                    </div>
-                </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="nationalid" placeholder="الرقم القومى">
+              </div>
+            </div>
             <div class="col-12 col-sm-6 offset-2">
-              <button type="submit" class="btn btn-secondary" onclick="checkid()">
+              <button type="submit" class="btn btn-secondary">
                 دخول
               </button>
             </div>
@@ -99,33 +100,32 @@
   </div>
   <!--adress-->
   <div class="row row-content ">
-        <div class="col-12 ml-auto adress">
-          <h3>اهلا بكم في الخدمة المركزيه للمرور المقدمة من الحكومة المصرية </h3>
+    <div class="col-12 ml-auto adress">
+      <h3>اهلا بكم في الخدمة المركزيه للمرور المقدمة من الحكومة المصرية </h3>
 
-        </div>
-      </div>
+    </div>
+  </div>
   <!-- introduction -->
   <div class="row row-content ">
-      <div class="col-5 introduction">
+    <div class="col-5 introduction">
       <p>يوفر هذا الموقع بعض الخدمات المرورية للمواطن المصري وهي :</p>
       <ol>
         <li class="ml-auto">استخراج رخصة شخصية ورخصة المركبات </li>
-        <li>تجديد الرخصة الشخصية ورخصة المركبات  </li>
+        <li>تجديد الرخصة الشخصية ورخصة المركبات </li>
         <li>معرفة المخالفات المرورية بالتفاصيل </li>
       </ol>
-        </div>
-      </div>
-
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="page-footer font-small ">
 
     <br>
-      <div class="col-2 col-sm-1 mr-auto">
-        <a role="button" class="btn btn-secondary btn-block fa fa-user" id="employee"></a>
-      </div>
-      <div class="footer-copyright text-center py-3">
-      © كل الحقوق محفوظه لعبد الله و بسمه و بولا
+    <div class="col-2 col-sm-1 mr-auto">
+      <a role="button" class="btn btn-secondary btn-block fa fa-user" id="employee"></a>
+    </div>
+    <div class="footer-copyright text-center py-3">
+      © كل الحقوق محفوظه لعبد الله و بسمه و بولا و احمد
     </div>
   </footer>
 
@@ -133,22 +133,22 @@
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./idcheck.js"></script>
 
 
-<script>
-$(document).ready(function(){
 
-				 $("#employee").click(function(){
-					 $('#employeePanel').modal('show');
-});
-$("#close").click(function(){
-	$('#employeePanel').modal('hide');
+  <script>
+    $(document).ready(function() {
 
-});
- });
+      $("#employee").click(function() {
+        $('#employeePanel').modal('show');
+      });
+      $("#close").click(function() {
+        $('#employeePanel').modal('hide');
 
-</script>
+      });
+    });
+  </script>
 
 </body>
+
 </html>
